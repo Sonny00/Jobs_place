@@ -105,7 +105,6 @@ class ListingController extends Controller
             Auth::login($user);
         }
 
-        // process the payment and create the listing
         try {
             $amount = 9900; // $99.00 USD in cents
             if ($request->filled('is_highlighted')) {
@@ -144,5 +143,10 @@ class ListingController extends Controller
             return redirect()->back()
                 ->withErrors(['error' => $e->getMessage()]);
         }
+
+        
     }
+
+
+
 }

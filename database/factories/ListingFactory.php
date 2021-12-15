@@ -31,7 +31,7 @@ class ListingFactory extends Factory
         }
 
         return [
-            'title' => $title,
+            'title' => $this->faker->jobTitle,
             'slug' => Str::slug($title) . '-' . rand(1111, 9999),
             'company' => $this->faker->company,
             'location' => $this->faker->country,
