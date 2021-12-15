@@ -5,16 +5,14 @@
             <span class="ml-3 text-xl">Job Place</span>
         </a>
         <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <a href="{{ route('login') }}" class="mr-5 hover:text-gray-900">Employeurs</a>
+            <a href="{{ route('login') }}" class="mr-5 hover:text-gray-900">Votre Listing</a>
         </nav>
 
         <nav class="">
             <a href="{{ route('login') }}" class="mr-5 hover:text-gray-900">Ajouter un Job</a>
         </nav>
         
-        <nav class="">
-            <a href="{{ route('register') }}" class="mr-5 hover:text-gray-900">S'inscrire</a>
-        </nav>
+      
 </div>
     </div>
 </header>

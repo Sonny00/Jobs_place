@@ -4,12 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
 
 
-Route::get('/register', [RegisteredUserController::class, 'create'])
-                ->middleware('guest')
-                ->name('register');
- 
-Route::post('/register', [RegisteredUserController::class, 'store'])
-                ->middleware('guest');
+
 
 Route::get('/', [Controllers\ListingController::class, 'index'])
     ->name('listings.index');
@@ -18,6 +13,12 @@ Route::get('/', [Controllers\ListingController::class, 'index'])
 Route::get('/dashboard', function (\Illuminate\Http\Request $request) {
     return view('dashboard', ['listings' => $request->user()->listings]);
 });
+
+Route::get('/ajout', function () {
+    return view('form');
+});
+
+
     
 require __DIR__.'/auth.php';
 
@@ -26,6 +27,8 @@ Route::get('/{listing}', [Controllers\ListingController::class, 'show'])
 
 Route::get('/{listing}/apply', [Controllers\ListingController::class, 'apply'])
 ->name('listings.apply');
+
+
 
 
  
