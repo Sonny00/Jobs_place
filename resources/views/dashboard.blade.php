@@ -3,7 +3,7 @@
         <div class="container px-5 py-12 mx-auto">
             <div class="mb-12 flex items-center">
                 <h2 class="text-2xl font-medium text-gray-900 title-font px-4">
-                    Your listings ({{ $listings->count() }})
+                    Votre Listing ({{ $listings->count() }})
                 </h2>
                 <form action="{{ route('logout') }}" method="post">
                     @csrf
