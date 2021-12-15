@@ -8,11 +8,7 @@
             <a href="{{ route('login') }}" class="mr-5 hover:text-gray-900">Votre Listing</a>
         </nav>
 
-        <nav class="">
-            <a href="{{ route('login') }}" class="mr-5 hover:text-gray-900">Ajouter un Job</a>
-        </nav>
         
-      
 </div>
     </div>
 </header>
